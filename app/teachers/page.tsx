@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Star, ExternalLink } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,10 +15,8 @@ const teachers = [
     specialty: "Vinyasa & Restorative Yoga",
     location: "Grand Cayman",
     experience: "13+ years",
-    rating: 5.0,
-    reviews: 156,
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop",
-    website: "https://gentilcoreyoga.com/yoga/",
+    website: "https://gentilcoreyoga.com",
     description: "E-RYT 200 with 5000+ teaching hours. Born in New Jersey, elite gymnast turned yogi. Discovered yoga gazing at Caribbean horizons. Offers power vinyasa, beginner, restorative, private & group classes. Heart-centered teaching emphasizing breath, alignment & introspective journey. Red Cross certified Water Safety & CPR instructor. Philosophy: 'Breath, Live, Discover.'",
     styles: ["Power Vinyasa", "Restorative", "Hatha", "Private Sessions"]
   },
@@ -28,8 +26,6 @@ const teachers = [
     specialty: "Baptiste Power Vinyasa",
     location: "Seven Mile Beach",
     experience: "15+ years",
-    rating: 4.9,
-    reviews: 142,
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "E-RYT 200, Baptiste Certified. Director of Bliss Yoga with 10+ years teaching experience. Trained in Baptiste, Anusara, Hatha & Ashtanga systems. Specializes in dynamic, uplifting Baptiste Style Vinyasa. Active community volunteer supporting marathons, cancer foundations & local charities.",
@@ -41,8 +37,6 @@ const teachers = [
     specialty: "Pranayama & Bhakti Yoga",
     location: "Grand Cayman",
     experience: "19 years",
-    rating: 5.0,
-    reviews: 89,
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
     website: "https://www.nationalgallery.org.ky/wellness/instructors/",
     description: "Yoga Alliance panelist & teacher with 19 years practice. Studied with gurus in the Himalayas & Mumbai University. Taught at ashrams & studios across India, USA, Canada, Bahamas, Bermuda & Cayman Islands. Specializes in pranayama, bhakti yoga, corporate breathwork & peak performance. Focuses on 'inner experience' helping clients find purpose & joy.",
@@ -54,8 +48,6 @@ const teachers = [
     specialty: "Kripalu Vinyasa",
     location: "Grand Cayman",
     experience: "6+ years",
-    rating: 4.9,
-    reviews: 76,
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "E-RYT 200, 500-hour Professional Level certified from Kripalu Center for Yoga & Health (Massachusetts). Creates vinyasa flows linking breath with movement. Focuses on energy systems (prana) & healing. Known for creative sequencing that honors body's wisdom.",
@@ -67,8 +59,6 @@ const teachers = [
     specialty: "Power Vinyasa",
     location: "Grand Cayman",
     experience: "12+ years",
-    rating: 4.8,
-    reviews: 94,
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "200-hour Hatha trained plus two 100-hour Power Vinyasa certifications. Moved to Grand Cayman in 2010 to teach yoga after discovering practice in NYC. Emphasizes strength & structure in dynamic Power Vinyasa style. Trained with master teachers in multiple workshops.",
@@ -80,8 +70,6 @@ const teachers = [
     specialty: "Multi-Style Yoga & Reiki",
     location: "Grand Cayman",
     experience: "8+ years",
-    rating: 4.9,
-    reviews: 67,
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop",
     website: "https://www.nationalgallery.org.ky/wellness/instructors/",
     description: "Cayman-born instructor with formal yoga & reiki training from Tirisula Yoga (Singapore & Bali). Discovered yoga's transformative effects during university. Teaches Hatha, Vinyasa, Kundalini, Yin & Restorative. Specializes in customized sessions helping clients 'slow down & breathe.'",
@@ -93,8 +81,6 @@ const teachers = [
     specialty: "Holistic Wellness & Asana",
     location: "Grand Cayman",
     experience: "10+ years",
-    rating: 4.8,
-    reviews: 58,
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop",
     website: "https://www.nationalgallery.org.ky/wellness/instructors/",
     description: "Trained at White Lotus Foundation (San Diego) & Bliss Living Yoga (2013). Studies herbal medicine at master's level. Combines yoga practice with holistic wellness approach integrating asana practice with herbal wisdom.",
@@ -106,8 +92,6 @@ const teachers = [
     specialty: "Jivamukti Yoga",
     location: "Grand Cayman",
     experience: "25+ years",
-    rating: 5.0,
-    reviews: 112,
     image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "Yoga Alliance 200-hour & 300-hour Jivamukti Yoga certified. Practicing since 1999. Trained with Sharon Gannon & David Life (workshops in Hong Kong). Emphasizes 'love, truth & compassion for all beings.' Advocates compassion as key to peaceful existence.",
@@ -119,8 +103,6 @@ const teachers = [
     specialty: "Baptiste Power Yoga",
     location: "Grand Cayman",
     experience: "18+ years",
-    rating: 4.7,
-    reviews: 91,
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "Baptiste Trained (200 hours), Baron Baptiste Level 1 (2006). Discovered yoga through surfing injury 7+ years ago. Mentored by Janelle. Specializes in Baptiste Power Yoga with focus on transformation & empowerment.",
@@ -132,8 +114,6 @@ const teachers = [
     specialty: "Baptiste Yoga",
     location: "Grand Cayman",
     experience: "28+ years",
-    rating: 4.8,
-    reviews: 73,
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
     website: "https://blissyogacayman.com",
     description: "Baptiste Trained (200 hours). Began yoga in 1996 for injury recovery from triathlons. Studied under Marni Task, Baron Baptiste, Manju Jois, David Belz & others. Values community connection & transformational power of practice.",
@@ -173,7 +153,7 @@ export default function TeachersPage() {
           {teachers.map((teacher) => (
             <div
               key={teacher.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100"
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100 flex flex-col"
             >
               {/* Card Header */}
               <div className="relative h-64 overflow-hidden">
@@ -189,7 +169,7 @@ export default function TeachersPage() {
               </div>
 
               {/* Card Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-6 space-y-4 flex flex-col flex-grow">
                 {/* Location & Experience */}
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-1 text-gray-600">
@@ -197,15 +177,6 @@ export default function TeachersPage() {
                     <span>{teacher.location}</span>
                   </div>
                   <span className="text-gray-500">{teacher.experience} exp</span>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1 text-yellow-500">
-                    <Star size={18} fill="currentColor" />
-                    <span className="font-semibold text-gray-900">{teacher.rating}</span>
-                  </div>
-                  <span className="text-sm text-gray-500">({teacher.reviews} reviews)</span>
                 </div>
 
                 {/* Description */}
@@ -230,7 +201,7 @@ export default function TeachersPage() {
                   href={teacher.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors mt-auto"
                 >
                   Visit Website
                   <ExternalLink size={16} />
