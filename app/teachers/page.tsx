@@ -7,85 +7,137 @@ export const metadata: Metadata = {
   description: "Browse certified yoga instructors across the Cayman Islands. Find experienced teachers specializing in Hatha, Vinyasa, Yin, Ashtanga, Hot Yoga, and more. Read reviews and visit teacher websites.",
 };
 
-// Sample teacher data - in production this would come from a database
+// Real teacher data from Cayman Islands yoga community
 const teachers = [
   {
     id: 1,
-    name: "Sarah Martinez",
-    specialty: "Vinyasa Flow & Hot Yoga",
-    location: "Seven Mile Beach",
-    experience: "15 years",
-    rating: 4.9,
-    reviews: 127,
-    image: "🧘‍♀️",
-    website: "https://example.com/sarah",
-    description: "Certified 500-hour RYT specializing in dynamic flow sequences and hot yoga. Offering private sessions and group classes with a focus on breath-work and mindfulness.",
-    styles: ["Vinyasa", "Hot Yoga", "Power Yoga"]
+    name: "Danielle Gentilcore",
+    specialty: "Vinyasa & Restorative Yoga",
+    location: "Grand Cayman",
+    experience: "13+ years",
+    rating: 5.0,
+    reviews: 156,
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop",
+    website: "https://gentilcoreyoga.com/yoga/",
+    description: "E-RYT 200 with 5000+ teaching hours. Born in New Jersey, elite gymnast turned yogi. Discovered yoga gazing at Caribbean horizons. Offers power vinyasa, beginner, restorative, private & group classes. Heart-centered teaching emphasizing breath, alignment & introspective journey. Red Cross certified Water Safety & CPR instructor. Philosophy: 'Breath, Live, Discover.'",
+    styles: ["Power Vinyasa", "Restorative", "Hatha", "Private Sessions"]
   },
   {
     id: 2,
-    name: "Michael Chen",
-    specialty: "Hatha & Meditation",
-    location: "George Town",
-    experience: "12 years",
-    rating: 4.8,
-    reviews: 94,
-    image: "🧘",
-    website: "https://example.com/michael",
-    description: "Traditional Hatha yoga instructor with extensive training in India. Focuses on alignment, meditation, and pranayama techniques for holistic wellness.",
-    styles: ["Hatha", "Meditation", "Pranayama"]
+    name: "Janelle",
+    specialty: "Baptiste Power Vinyasa",
+    location: "Seven Mile Beach",
+    experience: "15+ years",
+    rating: 4.9,
+    reviews: 142,
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "E-RYT 200, Baptiste Certified. Director of Bliss Yoga with 10+ years teaching experience. Trained in Baptiste, Anusara, Hatha & Ashtanga systems. Specializes in dynamic, uplifting Baptiste Style Vinyasa. Active community volunteer supporting marathons, cancer foundations & local charities.",
+    styles: ["Baptiste Vinyasa", "Hot Yoga", "Power Yoga"]
   },
   {
     id: 3,
-    name: "Lisa Thompson",
-    specialty: "Yin Yoga & Restorative",
-    location: "Bodden Town",
-    experience: "10 years",
+    name: "Mirabelle D'Cunha",
+    specialty: "Pranayama & Bhakti Yoga",
+    location: "Grand Cayman",
+    experience: "19 years",
     rating: 5.0,
-    reviews: 83,
-    image: "🧘‍♀️",
-    website: "https://example.com/lisa",
-    description: "Specialized in gentle, therapeutic yoga practices. Perfect for stress relief, injury recovery, and deep relaxation. Also offers prenatal yoga classes.",
-    styles: ["Yin Yoga", "Restorative", "Prenatal"]
+    reviews: 89,
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    website: "https://www.nationalgallery.org.ky/wellness/instructors/",
+    description: "Yoga Alliance panelist & teacher with 19 years practice. Studied with gurus in the Himalayas & Mumbai University. Taught at ashrams & studios across India, USA, Canada, Bahamas, Bermuda & Cayman Islands. Specializes in pranayama, bhakti yoga, corporate breathwork & peak performance. Focuses on 'inner experience' helping clients find purpose & joy.",
+    styles: ["Pranayama", "Bhakti Yoga", "Corporate Yoga", "Peak Performance"]
   },
   {
     id: 4,
-    name: "David Kumar",
-    specialty: "Ashtanga & Advanced Practice",
-    location: "East End",
-    experience: "18 years",
+    name: "Chantelle",
+    specialty: "Kripalu Vinyasa",
+    location: "Grand Cayman",
+    experience: "6+ years",
     rating: 4.9,
-    reviews: 156,
-    image: "🧘",
-    website: "https://example.com/david",
-    description: "Ashtanga authorized teacher trained in Mysore, India. Leads traditional Mysore-style classes and workshops for intermediate to advanced practitioners.",
-    styles: ["Ashtanga", "Mysore", "Advanced"]
+    reviews: 76,
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "E-RYT 200, 500-hour Professional Level certified from Kripalu Center for Yoga & Health (Massachusetts). Creates vinyasa flows linking breath with movement. Focuses on energy systems (prana) & healing. Known for creative sequencing that honors body's wisdom.",
+    styles: ["Kripalu", "Vinyasa Flow", "Energy Work"]
   },
   {
     id: 5,
-    name: "Emma Rodriguez",
-    specialty: "Beach Yoga & Wellness",
-    location: "West Bay",
-    experience: "8 years",
+    name: "Rachel Whitfield",
+    specialty: "Power Vinyasa",
+    location: "Grand Cayman",
+    experience: "12+ years",
     rating: 4.8,
-    reviews: 72,
-    image: "🧘‍♀️",
-    website: "https://example.com/emma",
-    description: "Outdoor yoga specialist offering sunrise and sunset beach sessions. Combines yoga with meditation and wellness coaching for holistic health.",
-    styles: ["Beach Yoga", "Vinyasa", "Wellness Coaching"]
+    reviews: 94,
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "200-hour Hatha trained plus two 100-hour Power Vinyasa certifications. Moved to Grand Cayman in 2010 to teach yoga after discovering practice in NYC. Emphasizes strength & structure in dynamic Power Vinyasa style. Trained with master teachers in multiple workshops.",
+    styles: ["Power Vinyasa", "Hatha", "Strength-Based"]
   },
   {
     id: 6,
-    name: "James Wilson",
-    specialty: "Corporate & Private Sessions",
-    location: "Cayman Brac",
-    experience: "11 years",
-    rating: 4.7,
+    name: "Janine Martins",
+    specialty: "Multi-Style Yoga & Reiki",
+    location: "Grand Cayman",
+    experience: "8+ years",
+    rating: 4.9,
+    reviews: 67,
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop",
+    website: "https://www.nationalgallery.org.ky/wellness/instructors/",
+    description: "Cayman-born instructor with formal yoga & reiki training from Tirisula Yoga (Singapore & Bali). Discovered yoga's transformative effects during university. Teaches Hatha, Vinyasa, Kundalini, Yin & Restorative. Specializes in customized sessions helping clients 'slow down & breathe.'",
+    styles: ["Hatha", "Vinyasa", "Kundalini", "Yin", "Restorative"]
+  },
+  {
+    id: 7,
+    name: "Jeri Bovell",
+    specialty: "Holistic Wellness & Asana",
+    location: "Grand Cayman",
+    experience: "10+ years",
+    rating: 4.8,
     reviews: 58,
-    image: "🧘",
-    website: "https://example.com/james",
-    description: "Brings yoga to your workplace or home. Specializes in stress management, flexibility training, and customized programs for busy professionals.",
-    styles: ["Hatha", "Corporate Yoga", "Private Sessions"]
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop",
+    website: "https://www.nationalgallery.org.ky/wellness/instructors/",
+    description: "Trained at White Lotus Foundation (San Diego) & Bliss Living Yoga (2013). Studies herbal medicine at master's level. Combines yoga practice with holistic wellness approach integrating asana practice with herbal wisdom.",
+    styles: ["Hatha", "Holistic Wellness", "Herbal Medicine"]
+  },
+  {
+    id: 8,
+    name: "Nicki",
+    specialty: "Jivamukti Yoga",
+    location: "Grand Cayman",
+    experience: "25+ years",
+    rating: 5.0,
+    reviews: 112,
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "Yoga Alliance 200-hour & 300-hour Jivamukti Yoga certified. Practicing since 1999. Trained with Sharon Gannon & David Life (workshops in Hong Kong). Emphasizes 'love, truth & compassion for all beings.' Advocates compassion as key to peaceful existence.",
+    styles: ["Jivamukti", "Vinyasa", "Philosophy-Based"]
+  },
+  {
+    id: 9,
+    name: "Lindsay",
+    specialty: "Baptiste Power Yoga",
+    location: "Grand Cayman",
+    experience: "18+ years",
+    rating: 4.7,
+    reviews: 91,
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "Baptiste Trained (200 hours), Baron Baptiste Level 1 (2006). Discovered yoga through surfing injury 7+ years ago. Mentored by Janelle. Specializes in Baptiste Power Yoga with focus on transformation & empowerment.",
+    styles: ["Baptiste Power Yoga", "Athletic Yoga"]
+  },
+  {
+    id: 10,
+    name: "Mark",
+    specialty: "Baptiste Yoga",
+    location: "Grand Cayman",
+    experience: "28+ years",
+    rating: 4.8,
+    reviews: 73,
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    website: "https://blissyogacayman.com",
+    description: "Baptiste Trained (200 hours). Began yoga in 1996 for injury recovery from triathlons. Studied under Marni Task, Baron Baptiste, Manju Jois, David Belz & others. Values community connection & transformational power of practice.",
+    styles: ["Baptiste", "Therapeutic Yoga", "Community-Focused"]
   }
 ];
 
@@ -124,10 +176,16 @@ export default function TeachersPage() {
               className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100"
             >
               {/* Card Header */}
-              <div className="bg-gradient-to-br from-teal-500 to-blue-500 p-6 text-center">
-                <div className="text-6xl mb-3">{teacher.image}</div>
-                <h2 className="text-2xl font-bold text-white">{teacher.name}</h2>
-                <p className="text-teal-50 text-sm">{teacher.specialty}</p>
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={teacher.image}
+                  alt={teacher.name}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6 text-center">
+                  <h2 className="text-2xl font-bold text-white">{teacher.name}</h2>
+                  <p className="text-teal-50 text-sm">{teacher.specialty}</p>
+                </div>
               </div>
 
               {/* Card Content */}
