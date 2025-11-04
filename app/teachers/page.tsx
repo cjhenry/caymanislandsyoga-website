@@ -199,8 +199,32 @@ export default function TeachersPage() {
 
       {/* Footer */}
       <footer className="mt-12 py-8 border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center text-gray-600">
-          <p>© 2024 Cayman Yoga. Connecting wellness seekers with certified yoga instructors.</p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 mb-6">
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3">Cayman Yoga</h3>
+              <p className="text-sm text-gray-600">Connecting wellness seekers with certified yoga instructors</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link></li>
+                <li><Link href="/teachers" className="text-teal-600 font-medium">Teachers</Link></li>
+                <li><Link href="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3">Resources</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-teal-600">Finding a Teacher</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-teal-600">Wellness Tips</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center text-gray-600 text-sm pt-6 border-t border-gray-200">
+            <p>© 2024 Cayman Yoga. Connecting wellness seekers with certified yoga instructors.</p>
+          </div>
         </div>
       </footer>
     </div>
