@@ -10,6 +10,105 @@ export const metadata: Metadata = {
 // Sample blog posts - in production would come from CMS or database
 const blogPosts = [
   {
+    slug: "why-private-yoga-classes-grand-cayman",
+    title: "Why Should You Book Private Yoga Classes in Grand Cayman?",
+    excerpt: "Private yoga sessions give people one-on-one attention and custom routines that group classes can't match. Students see faster progress and learn proper form.",
+    date: "2025-01-15",
+    readTime: "4 min read",
+    category: "Private Classes",
+    image: "🧘"
+  },
+  {
+    slug: "what-makes-beach-yoga-special",
+    title: "What Makes Beach Yoga in Cayman So Special?",
+    excerpt: "Practicing yoga on the beach combines fresh ocean air with soft sand that makes the body work harder. People love the peaceful sounds of waves during meditation.",
+    date: "2025-01-12",
+    readTime: "3 min read",
+    category: "Beach Yoga",
+    image: "🏝️"
+  },
+  {
+    slug: "how-online-yoga-works-cayman",
+    title: "How Does Online Yoga Work for Cayman Residents?",
+    excerpt: "Online yoga lets students practice from home with certified teachers through video calls. It's perfect for busy schedules and saves travel time.",
+    date: "2025-01-10",
+    readTime: "4 min read",
+    category: "Online Yoga",
+    image: "💻"
+  },
+  {
+    slug: "what-to-expect-yoga-retreat-cayman",
+    title: "What Can You Expect at a Yoga Retreat in Cayman?",
+    excerpt: "Yoga retreats combine daily practice with healthy meals and island adventures. Guests leave feeling refreshed and with new yoga skills.",
+    date: "2025-01-08",
+    readTime: "5 min read",
+    category: "Retreats",
+    image: "🌴"
+  },
+  {
+    slug: "why-hotels-offer-yoga-cayman",
+    title: "Why Do Cayman Hotels Offer Yoga Classes?",
+    excerpt: "Hotels provide yoga to help guests relax and enjoy their vacation more. Classes happen right on property so visitors don't need to go anywhere.",
+    date: "2025-01-05",
+    readTime: "3 min read",
+    category: "Hotel Yoga",
+    image: "🏨"
+  },
+  {
+    slug: "is-group-yoga-right-for-you",
+    title: "Is Group Yoga Right for You in Grand Cayman?",
+    excerpt: "Group classes create community and cost less than private sessions. Students enjoy making friends while learning yoga together.",
+    date: "2025-01-02",
+    readTime: "4 min read",
+    category: "Group Classes",
+    image: "👥"
+  },
+  {
+    slug: "top-5-reasons-choose-private-yoga-cayman",
+    title: "Top 5 Reasons to Choose Private Yoga in Grand Cayman",
+    excerpt: "Certified instructors offer personalized programs that fit individual needs. Private sessions deliver faster results with flexible scheduling.",
+    date: "2024-12-28",
+    readTime: "5 min read",
+    category: "Top Reasons",
+    image: "⭐"
+  },
+  {
+    slug: "top-reasons-beach-yoga-seven-mile",
+    title: "Top Reasons to Try Beach Yoga on Seven Mile Beach",
+    excerpt: "The natural setting strengthens the body while calming the mind. Students get better workouts on sand with ocean views.",
+    date: "2024-12-25",
+    readTime: "4 min read",
+    category: "Top Reasons",
+    image: "🌟"
+  },
+  {
+    slug: "why-choose-online-yoga-grand-cayman",
+    title: "Why Choose Online Yoga Classes in Grand Cayman",
+    excerpt: "Virtual classes save time and money while offering access to the best teachers. Students practice from anywhere at convenient times.",
+    date: "2024-12-22",
+    readTime: "4 min read",
+    category: "Top Reasons",
+    image: "✨"
+  },
+  {
+    slug: "best-yoga-grand-cayman",
+    title: "Where to Find the Best Yoga in Grand Cayman",
+    excerpt: "Grand Cayman offers certified instructors across Seven Mile Beach, George Town, and East End. Quality studios and beach classes serve all skill levels.",
+    date: "2024-12-20",
+    readTime: "6 min read",
+    category: "Location Guide",
+    image: "📍"
+  },
+  {
+    slug: "yoga-seven-mile-beach-guide",
+    title: "Your Complete Guide to Yoga on Seven Mile Beach",
+    excerpt: "Seven Mile Beach has the island's best beach yoga programs and studio options. Morning and sunset classes attract both locals and tourists.",
+    date: "2024-12-18",
+    readTime: "5 min read",
+    category: "Location Guide",
+    image: "🏖️"
+  },
+  {
     slug: "best-yoga-styles-for-beginners",
     title: "Best Yoga Styles for Beginners in Cayman",
     excerpt: "Starting your yoga journey in the Cayman Islands? Learn which yoga styles are perfect for beginners and where to find the best classes.",

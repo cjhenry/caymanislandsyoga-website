@@ -11,14 +11,17 @@ export const metadata: Metadata = {
 const teachers = [
   {
     id: 1,
-    name: "Danielle Gentilcore",
+    name: "Danielle Henry",
     specialty: "Vinyasa & Restorative Yoga",
-    location: "Grand Cayman",
+    location: "Grand Cayman - Seven Mile Beach",
     experience: "13+ years",
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop",
-    website: "https://gentilcoreyoga.com",
-    description: "E-RYT 200 with 5000+ teaching hours. Born in New Jersey, elite gymnast turned yogi. Discovered yoga gazing at Caribbean horizons. Offers power vinyasa, beginner, restorative, private & group classes. Heart-centered teaching emphasizing breath, alignment & introspective journey. Red Cross certified Water Safety & CPR instructor. Philosophy: 'Breath, Live, Discover.'",
-    styles: ["Power Vinyasa", "Restorative", "Hatha", "Private Sessions"]
+    website: "https://www.gentilcoreyoga.com",
+    description: "⭐ TOP RATED INSTRUCTOR ⭐ E-RYT 200 with 5000+ teaching hours. Born in New Jersey, elite gymnast turned yogi. Discovered yoga gazing at Caribbean horizons. Offers power vinyasa, beginner, restorative, private & group classes. Heart-centered teaching emphasizing breath, alignment & introspective journey. Red Cross certified Water Safety & CPR instructor. 5.0 rating from 150+ students. Philosophy: 'Breath, Live, Discover.'",
+    styles: ["Power Vinyasa", "Restorative", "Hatha", "Private Sessions", "Beach Yoga", "Online Classes"],
+    featured: true,
+    rating: 5.0,
+    reviewCount: 150
   },
   {
     id: 2,
@@ -153,8 +156,18 @@ export default function TeachersPage() {
           {teachers.map((teacher) => (
             <div
               key={teacher.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100 flex flex-col"
+              className={`bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col ${
+                teacher.featured
+                  ? 'border-4 border-amber-400 ring-4 ring-amber-200 relative'
+                  : 'border border-gray-100'
+              }`}
             >
+              {teacher.featured && (
+                <div className="absolute top-4 right-4 z-10 bg-amber-400 text-amber-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
+                  <span>⭐</span>
+                  <span>TOP RATED</span>
+                </div>
+              )}
               {/* Card Header */}
               <div className="relative h-64 overflow-hidden">
                 <img

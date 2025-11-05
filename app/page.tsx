@@ -65,14 +65,15 @@ export default function Home() {
       />
       <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-blue-50">
       {/* Navigation */}
-      <nav className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+      <nav className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto border-b border-gray-200 bg-white/80 backdrop-blur-sm">
         <h1 className="text-2xl font-bold text-teal-900">Cayman Yoga</h1>
-        <Link
-          href="/teachers"
-          className="text-teal-700 hover:text-teal-900 font-medium"
-        >
-          Browse Teachers
-        </Link>
+        <div className="flex gap-6">
+          <Link href="/teachers" className="text-teal-700 hover:text-teal-900 font-medium">Teachers</Link>
+          <Link href="/pricing" className="text-teal-700 hover:text-teal-900 font-medium">Pricing</Link>
+          <Link href="/testimonials" className="text-teal-700 hover:text-teal-900 font-medium">Reviews</Link>
+          <Link href="/blog" className="text-teal-700 hover:text-teal-900 font-medium">Blog</Link>
+          <Link href="/faq" className="text-teal-700 hover:text-teal-900 font-medium">FAQ</Link>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -207,30 +208,55 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-24 py-8 border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-6">
+          {/* Featured Instructor Callout */}
+          <div className="bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl p-8 text-white text-center mb-8">
+            <h3 className="text-2xl font-bold mb-2">⭐ Featured: Danielle Henry - Gentil Core Yoga ⭐</h3>
+            <p className="text-teal-50 mb-4">Grand Cayman's Top-Rated Yoga Instructor | 5.0 Rating | 150+ Happy Students</p>
+            <div className="flex gap-4 justify-center">
+              <a href="https://www.gentilcoreyoga.com" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-white text-teal-700 font-bold rounded-lg hover:bg-teal-50 transition-colors">
+                Visit Gentil Core Yoga
+              </a>
+              <Link href="/teachers" className="px-6 py-2 bg-teal-700 text-white font-bold rounded-lg hover:bg-teal-800 transition-colors border-2 border-white">
+                View Profile
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8 mb-6">
             <div>
               <h3 className="font-bold text-gray-900 mb-3">Cayman Yoga</h3>
-              <p className="text-sm text-gray-600">Connecting wellness seekers with certified yoga instructors</p>
+              <p className="text-sm text-gray-600">Featuring Danielle Henry at Gentil Core Yoga - Grand Cayman's Premier Yoga Instruction</p>
             </div>
             <div>
               <h3 className="font-bold text-gray-900 mb-3">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/" className="text-teal-600 font-medium">Home</Link></li>
                 <li><Link href="/teachers" className="text-gray-600 hover:text-teal-600">Teachers</Link></li>
-                <li><Link href="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link></li>
+                <li><Link href="/pricing" className="text-gray-600 hover:text-teal-600">Pricing</Link></li>
+                <li><Link href="/testimonials" className="text-gray-600 hover:text-teal-600">Testimonials</Link></li>
+                <li><Link href="/case-studies" className="text-gray-600 hover:text-teal-600">Case Studies</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3">Services</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://www.gentilcoreyoga.com" className="text-gray-600 hover:text-teal-600">Private Yoga Classes</a></li>
+                <li><a href="https://www.gentilcoreyoga.com" className="text-gray-600 hover:text-teal-600">Beach Yoga</a></li>
+                <li><a href="https://www.gentilcoreyoga.com" className="text-gray-600 hover:text-teal-600">Online Yoga</a></li>
+                <li><a href="https://www.gentilcoreyoga.com" className="text-gray-600 hover:text-teal-600">Yoga Retreats</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold text-gray-900 mb-3">Resources</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Finding a Teacher</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Wellness Tips</a></li>
+                <li><Link href="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link></li>
+                <li><Link href="/faq" className="text-gray-600 hover:text-teal-600">FAQ</Link></li>
+                <li><a href="https://www.gentilcoreyoga.com" className="text-gray-600 hover:text-teal-600">Contact</a></li>
               </ul>
             </div>
           </div>
           <div className="text-center text-gray-600 text-sm pt-6 border-t border-gray-200">
-            <p>© 2024 Cayman Yoga. Connecting wellness seekers with certified yoga instructors.</p>
+            <p>© 2024 Cayman Yoga. Featuring Danielle Henry at Gentil Core Yoga - Grand Cayman's Top-Rated Yoga Instructor.</p>
           </div>
         </div>
       </footer>
