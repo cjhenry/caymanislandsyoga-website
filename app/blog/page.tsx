@@ -157,13 +157,20 @@ export default function BlogPage() {
           <div className="flex gap-3 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border-2 border-teal-200 rounded-lg focus:outline-none focus:border-teal-500"
+              placeholder="Email subscription coming soon..."
+              className="flex-1 px-4 py-3 border-2 border-teal-200 rounded-lg focus:outline-none focus:border-teal-500 cursor-not-allowed opacity-75"
+              disabled
+              title="Newsletter subscription coming soon!"
             />
-            <button className="px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors">
+            <button
+              className="px-6 py-3 bg-gray-400 text-white font-semibold rounded-lg cursor-not-allowed"
+              disabled
+              title="Newsletter subscription coming soon!"
+            >
               Subscribe
             </button>
           </div>
+          <p className="text-sm text-gray-500 mt-3">Newsletter feature coming soon!</p>
         </div>
       </main>
 

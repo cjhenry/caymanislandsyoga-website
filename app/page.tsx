@@ -94,13 +94,22 @@ export default function Home() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search by style, location, or teacher name..."
-                className="w-full px-6 py-4 pr-14 text-lg border-2 border-teal-200 rounded-full focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200"
+                placeholder="Search by style, location, or teacher name... (Coming soon)"
+                className="w-full px-6 py-4 pr-14 text-lg border-2 border-teal-200 rounded-full focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200 cursor-not-allowed opacity-75"
+                disabled
+                title="Search functionality coming soon! Browse all teachers instead."
               />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-colors">
+              <Link
+                href="/teachers"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-colors"
+                title="Browse all teachers"
+              >
                 <Search size={24} />
-              </button>
+              </Link>
             </div>
+            <p className="text-center text-sm text-gray-500 mt-2">
+              Browse all teachers below or use the button to view the full directory
+            </p>
           </div>
 
           {/* Popular Styles */}

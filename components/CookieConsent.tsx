@@ -42,10 +42,10 @@ export default function CookieConsent() {
             <div>
               <h3 className="font-bold text-gray-900 mb-1">Cookie Consent</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                We use cookies to enhance your browsing experience, analyze site traffic,
-                and personalize content. By clicking "Accept", you consent to our use of cookies.
+                We use browser storage to enhance your browsing experience and remember your preferences.
+                By clicking "Accept", you consent to our use of browser storage.
                 {' '}
-                <a href="#" className="text-teal-600 hover:underline font-medium">
+                <a href="/cookies" className="text-teal-600 hover:underline font-medium">
                   Learn more
                 </a>
               </p>
