@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Certified Yoga Teachers Directory",
@@ -217,45 +218,19 @@ export default function TeachersPage() {
             Are You a Yoga Teacher?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Join our directory and connect with students across the Cayman Islands.
-            List your classes and grow your yoga business today.
+            We're building a comprehensive directory to connect certified yoga instructors with students across the Cayman Islands. Teacher registration coming soon!
           </p>
-          <button className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-full hover:bg-teal-700 transition-colors shadow-lg">
-            List Your Classes
+          <button
+            className="px-8 py-4 bg-gray-400 text-white text-lg font-semibold rounded-full cursor-not-allowed"
+            disabled
+            title="Teacher registration feature coming soon!"
+          >
+            Registration Coming Soon
           </button>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-12 py-8 border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-6">
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Cayman Yoga</h3>
-              <p className="text-sm text-gray-600">Connecting wellness seekers with certified yoga instructors</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link></li>
-                <li><Link href="/teachers" className="text-teal-600 font-medium">Teachers</Link></li>
-                <li><Link href="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Finding a Teacher</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Wellness Tips</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center text-gray-600 text-sm pt-6 border-t border-gray-200">
-            <p>© 2024 Cayman Yoga. Connecting wellness seekers with certified yoga instructors.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer currentPage="teachers" />
     </div>
   );
 }

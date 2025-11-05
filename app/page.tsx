@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Find the Best Yoga Teachers in Cayman Islands",
@@ -113,28 +114,28 @@ export default function Home() {
           </div>
 
           {/* Popular Styles */}
-          <div className="flex flex-wrap gap-3 justify-center mt-8">
-            {["Hatha", "Vinyasa", "Yin", "Ashtanga", "Restorative", "Hot Yoga"].map((style) => (
-              <button
-                key={style}
-                className="px-6 py-2 bg-white border-2 border-teal-200 text-teal-800 rounded-full hover:bg-teal-50 hover:border-teal-400 transition-all"
-              >
-                {style}
-              </button>
-            ))}
+          <div className="mt-8">
+            <p className="text-center text-sm text-gray-600 mb-3">Popular yoga styles available:</p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["Hatha", "Vinyasa", "Yin", "Ashtanga", "Restorative", "Hot Yoga"].map((style) => (
+                <span
+                  key={style}
+                  className="px-6 py-2 bg-teal-50 border-2 border-teal-200 text-teal-700 rounded-full font-medium"
+                >
+                  {style}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <div className="flex justify-center mt-12">
             <Link
               href="/teachers"
               className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-full hover:bg-teal-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore All Teachers
             </Link>
-            <button className="px-8 py-4 bg-white text-teal-700 text-lg font-semibold rounded-full border-2 border-teal-600 hover:bg-teal-50 transition-colors">
-              List Your Classes
-            </button>
           </div>
         </div>
 
@@ -213,36 +214,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-24 py-8 border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-6">
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Cayman Yoga</h3>
-              <p className="text-sm text-gray-600">Connecting wellness seekers with certified yoga instructors</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/" className="text-teal-600 font-medium">Home</Link></li>
-                <li><Link href="/teachers" className="text-gray-600 hover:text-teal-600">Teachers</Link></li>
-                <li><Link href="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Finding a Teacher</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Wellness Tips</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center text-gray-600 text-sm pt-6 border-t border-gray-200">
-            <p>© 2024 Cayman Yoga. Connecting wellness seekers with certified yoga instructors.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer currentPage="home" />
     </div>
     </>
   );
