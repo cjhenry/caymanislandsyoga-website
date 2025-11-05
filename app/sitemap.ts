@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllTeacherSlugs } from '@/data/teachers'
+import { getAllVenueSlugs } from '@/data/venues'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://caymanyoga.com'
@@ -25,6 +26,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const teacherSlugs = getAllTeacherSlugs()
   const teacherUrls = teacherSlugs.map(slug => ({
     url: `${baseUrl}/teachers/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Venue pages
+  const venueSlugs = getAllVenueSlugs()
+  const venueUrls = venueSlugs.map(slug => ({
+    url: `${baseUrl}/venues/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
@@ -79,7 +89,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/venues`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     ...teacherUrls,
+    ...venueUrls,
     ...blogUrls
   ]
 }

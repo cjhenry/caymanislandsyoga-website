@@ -67,12 +67,11 @@ export default function Home() {
       {/* Navigation */}
       <nav className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
         <h1 className="text-2xl font-bold text-teal-900">Cayman Yoga</h1>
-        <Link
-          href="/teachers"
-          className="text-teal-700 hover:text-teal-900 font-medium"
-        >
-          Browse Teachers
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/teachers" className="text-teal-700 hover:text-teal-900 font-medium">Teachers</Link>
+          <Link href="/schedule" className="text-teal-700 hover:text-teal-900 font-medium">Schedule</Link>
+          <Link href="/venues" className="text-teal-700 hover:text-teal-900 font-medium">Venues</Link>
+        </div>
       </nav>
 
       {/* Hero Section */}
