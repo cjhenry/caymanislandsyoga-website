@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
   title: "Yoga Blog - Tips, Guides & Wellness",
@@ -147,23 +148,8 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter CTA */}
-        <div className="mt-16 bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
-            Stay Updated
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Get the latest yoga tips, teacher profiles, and wellness insights delivered to your inbox
-          </p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border-2 border-teal-200 rounded-lg focus:outline-none focus:border-teal-500"
-            />
-            <button className="px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors">
-              Subscribe
-            </button>
-          </div>
+        <div className="mt-16">
+          <NewsletterSignup />
         </div>
       </main>
 
@@ -180,6 +166,7 @@ export default function BlogPage() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link></li>
                 <li><Link href="/teachers" className="text-gray-600 hover:text-teal-600">Teachers</Link></li>
+                <li><Link href="/schedule" className="text-gray-600 hover:text-teal-600">Schedule</Link></li>
                 <li><Link href="/blog" className="text-teal-600 font-medium">Blog</Link></li>
               </ul>
             </div>

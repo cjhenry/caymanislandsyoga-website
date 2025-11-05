@@ -173,9 +173,9 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-3">Resources</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Finding a Teacher</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-teal-600">Wellness Tips</a></li>
+                <li><Link href="/yoga-styles" className="text-gray-600 hover:text-teal-600">Yoga Styles Guide</Link></li>
+                <li><Link href="/guide/finding-teacher" className="text-gray-600 hover:text-teal-600">Finding a Teacher</Link></li>
+                <li><Link href="/wellness" className="text-gray-600 hover:text-teal-600">Wellness Tips</Link></li>
               </ul>
             </div>
           </div>

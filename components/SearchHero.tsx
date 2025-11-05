@@ -80,14 +80,17 @@ export default function SearchHero() {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
         <Link
-          href="/teachers"
+          href="/schedule"
           className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-full hover:bg-teal-700 transition-colors shadow-lg hover:shadow-xl"
         >
-          Explore All Teachers
+          View Class Schedule
         </Link>
-        <button className="px-8 py-4 bg-white text-teal-700 text-lg font-semibold rounded-full border-2 border-teal-600 hover:bg-teal-50 transition-colors">
-          List Your Classes
-        </button>
+        <Link
+          href="/teachers"
+          className="px-8 py-4 bg-white text-teal-700 text-lg font-semibold rounded-full border-2 border-teal-600 hover:bg-teal-50 transition-colors"
+        >
+          Browse Teachers
+        </Link>
       </div>
     </div>
   );

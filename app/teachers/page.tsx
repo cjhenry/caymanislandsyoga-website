@@ -49,9 +49,12 @@ export default function TeachersPage() {
             Join our directory and connect with students across the Cayman Islands.
             List your classes and grow your yoga business today.
           </p>
-          <button className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-full hover:bg-teal-700 transition-colors shadow-lg">
+          <Link
+            href="/register-teacher"
+            className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-full hover:bg-teal-700 transition-colors shadow-lg inline-block"
+          >
             List Your Classes
-          </button>
+          </Link>
         </div>
       </main>
 
