@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Find the Best Yoga Teachers in Cayman Islands",
   description: "Discover certified yoga instructors and classes across Grand Cayman, Cayman Brac, and Little Cayman. Browse teachers specializing in Hatha, Vinyasa, Yin, Hot Yoga, and more.",
+  alternates: {
+    canonical: 'https://www.caymanislandsyoga.com',
+  },
 };
 
 export default function Home() {
@@ -13,11 +16,11 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Cayman Yoga",
-    "url": "https://caymanyoga.com",
+    "url": "https://www.caymanislandsyoga.com",
     "description": "Find certified yoga teachers and classes in the Cayman Islands",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://caymanyoga.com/search?q={search_term_string}",
+      "target": "https://www.caymanislandsyoga.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

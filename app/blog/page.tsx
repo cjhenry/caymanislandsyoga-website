@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Yoga Blog - Tips, Guides & Wellness",
   description: "Explore yoga tips, wellness guides, and insights from certified instructors in the Cayman Islands. Learn about different yoga styles, benefits, and local yoga culture.",
+  alternates: {
+    canonical: 'https://www.caymanislandsyoga.com/blog',
+  },
 };
 
 // Sample blog posts - in production would come from CMS or database
