@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://caymanyoga.com'
+  const baseUrl = 'https://www.caymanislandsyoga.com'
 
   // Blog post slugs
   const blogPosts = [

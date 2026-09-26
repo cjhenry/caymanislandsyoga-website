@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://caymanyoga.com'),
+  metadataBase: new URL('https://www.caymanislandsyoga.com'),
   title: {
     default: "Cayman Yoga - Find the Best Yoga Teachers in Cayman Islands",
     template: "%s | Cayman Yoga"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://caymanyoga.com",
+    url: "https://www.caymanislandsyoga.com",
     siteName: "Cayman Yoga",
     title: "Find the Best Yoga Teachers in Cayman Islands",
     description: "Connect with certified yoga instructors offering personalized classes across the Cayman Islands. Discover your perfect yoga teacher today.",

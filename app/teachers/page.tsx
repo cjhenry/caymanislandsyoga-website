@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Certified Yoga Teachers Directory",
   description: "Browse certified yoga instructors across the Cayman Islands. Find experienced teachers specializing in Hatha, Vinyasa, Yin, Ashtanga, Hot Yoga, and more. Read reviews and visit teacher websites.",
+  alternates: {
+    canonical: 'https://www.caymanislandsyoga.com/teachers',
+  },
 };
 
 // Real teacher data from Cayman Islands yoga community
@@ -157,6 +160,8 @@ export default function TeachersPage() {
             >
               {/* Card Header */}
               <div className="relative h-64 overflow-hidden">
+                {/* TODO: Replace Unsplash stock images with real teacher-supplied photos.
+                     Currently using stock photos as placeholders - needs human review/real photos from each teacher. */}
                 <img
                   src={teacher.image}
                   alt={teacher.name}

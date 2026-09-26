@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/private/'],
     },
-    sitemap: 'https://caymanyoga.com/sitemap.xml',
+    sitemap: 'https://www.caymanislandsyoga.com/sitemap.xml',
   }
 }
