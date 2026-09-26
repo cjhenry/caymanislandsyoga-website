@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.caymanislandsyoga.com',
   },
+  openGraph: {
+    type: "website",
+    url: "https://www.caymanislandsyoga.com",
+    title: "Find the Best Yoga Teachers in Cayman Islands",
+    description: "Discover certified yoga instructors and classes across Grand Cayman, Cayman Brac, and Little Cayman. Browse teachers specializing in Hatha, Vinyasa, Yin, Hot Yoga, and more.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Find the Best Yoga Teachers in Cayman Islands",
+    description: "Discover certified yoga instructors and classes across Grand Cayman, Cayman Brac, and Little Cayman. Browse teachers specializing in Hatha, Vinyasa, Yin, Hot Yoga, and more.",
+  },
 };
 
 export default function Home() {

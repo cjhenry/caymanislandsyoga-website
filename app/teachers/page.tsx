@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.caymanislandsyoga.com/teachers',
   },
+  openGraph: {
+    type: "website",
+    url: "https://www.caymanislandsyoga.com/teachers",
+    title: "Certified Yoga Teachers Directory",
+    description: "Browse certified yoga instructors across the Cayman Islands. Find experienced teachers specializing in Hatha, Vinyasa, Yin, Ashtanga, Hot Yoga, and more.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Certified Yoga Teachers Directory",
+    description: "Browse certified yoga instructors across the Cayman Islands. Find experienced teachers specializing in Hatha, Vinyasa, Yin, Ashtanga, Hot Yoga, and more.",
+  },
 };
 
 // Real teacher data from Cayman Islands yoga community

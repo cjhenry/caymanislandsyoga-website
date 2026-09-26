@@ -215,6 +215,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `https://www.caymanislandsyoga.com/blog/${slug}`,
     },
+    openGraph: {
+      type: "article",
+      url: `https://www.caymanislandsyoga.com/blog/${slug}`,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: ["Cayman Yoga"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
