@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.caymanislandsyoga.com/blog',
   },
+  openGraph: {
+    type: "website",
+    url: "https://www.caymanislandsyoga.com/blog",
+    title: "Yoga Blog - Tips, Guides & Wellness",
+    description: "Explore yoga tips, wellness guides, and insights from certified instructors in the Cayman Islands. Learn about different yoga styles, benefits, and local yoga culture.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yoga Blog - Tips, Guides & Wellness",
+    description: "Explore yoga tips, wellness guides, and insights from certified instructors in the Cayman Islands. Learn about different yoga styles, benefits, and local yoga culture.",
+  },
 };
 
 // Sample blog posts - in production would come from CMS or database
