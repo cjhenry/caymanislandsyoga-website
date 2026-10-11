@@ -1,0 +1,87 @@
+name: IndexNow Notification
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'workflow_dispatch' || 
+      (github.event.deployment_status.state == 'success' && 
+       github.event.deployment_status.environment == 'Production')
+    
+    steps:
+      - name: Fetch sitemap and notify IndexNow
+        run: |
+          set -e
+          
+          CANONICAL_HOST="www.caymanislandsyoga.com"
+          SITEMAP_URL="https://${CANONICAL_HOST}/sitemap.xml"
+          INDEXNOW_KEY="0dd49a1031ac4003982e4ccc569b1748"
+          KEY_LOCATION="https://${CANONICAL_HOST}/${INDEXNOW_KEY}.txt"
+          
+          echo "Fetching sitemap from: ${SITEMAP_URL}"
+          
+          # Fetch sitemap and extract URLs
+          SITEMAP_CONTENT=$(curl -sSL "${SITEMAP_URL}")
+          
+          # Check if it's a sitemap index
+          if echo "${SITEMAP_CONTENT}" | grep -q "<sitemapindex"; then
+            echo "Found sitemap index, extracting child sitemaps..."
+            CHILD_SITEMAPS=$(echo "${SITEMAP_CONTENT}" | grep -oP '(?<=<loc>)[^<]+')
+            
+            ALL_URLS=""
+            for CHILD_SITEMAP in ${CHILD_SITEMAPS}; do
+              echo "Fetching child sitemap: ${CHILD_SITEMAP}"
+              CHILD_CONTENT=$(curl -sSL "${CHILD_SITEMAP}")
+              CHILD_URLS=$(echo "${CHILD_CONTENT}" | grep -oP '(?<=<loc>)[^<]+')
+              ALL_URLS="${ALL_URLS}"$'\n'"${CHILD_URLS}"
+            done
+          else
+            echo "Found regular sitemap, extracting URLs..."
+            ALL_URLS=$(echo "${SITEMAP_CONTENT}" | grep -oP '(?<=<loc>)[^<]+')
+          fi
+          
+          # Convert URLs to JSON array (limit to 10,000)
+          URL_LIST=$(echo "${ALL_URLS}" | grep -v '^$' | head -10000 | jq -R . | jq -s .)
+          URL_COUNT=$(echo "${URL_LIST}" | jq 'length')
+          
+          echo "Found ${URL_COUNT} URLs to submit"
+          
+          # Create JSON payload
+          PAYLOAD=$(jq -n \
+            --arg host "${CANONICAL_HOST}" \
+            --arg key "${INDEXNOW_KEY}" \
+            --arg keyLocation "${KEY_LOCATION}" \
+            --argjson urlList "${URL_LIST}" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+          
+          echo "Submitting to IndexNow API..."
+          
+          # Submit to IndexNow
+          HTTP_STATUS=$(curl -w "%{http_code}" -o /tmp/indexnow-response.json -s \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d "${PAYLOAD}" \
+            "https://api.indexnow.org/indexnow")
+          
+          echo "IndexNow API returned HTTP ${HTTP_STATUS}"
+          
+          if [ -f /tmp/indexnow-response.json ]; then
+            echo "Response body:"
+            cat /tmp/indexnow-response.json
+          fi
+          
+          # Treat 200 and 202 as success
+          if [ "${HTTP_STATUS}" = "200" ] || [ "${HTTP_STATUS}" = "202" ]; then
+            echo "✓ Successfully notified IndexNow of ${URL_COUNT} URLs"
+            exit 0
+          elif [ "${HTTP_STATUS}" = "429" ]; then
+            echo "⚠ Rate limited (429) - this is expected occasionally"
+            exit 0
+          else
+            echo "⚠ Unexpected status ${HTTP_STATUS}, but not failing the job"
+            exit 0
+          fi
